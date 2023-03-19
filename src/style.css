@@ -1,0 +1,32 @@
+html{
+  height: 100%;
+  overflow: hidden;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.App{
+  display: flex;
+  height: 100svh;
+}
+#Page1{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: 'one two''three thour';
+}
+.CircleLayer{
+  background: repeating-radial-gradient(circle at 1%, #333, #333 20%, #eee 75%);
+  background-size:100% 100%;
+  shape-outside: circle();
+clip-path: circle(15vw at center center);
+  animation: SpinCircle 2000ms ease-in-out infinite;
+  grid-area: three;
+}
+@keyframes SpinCircle {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);} 
+}
