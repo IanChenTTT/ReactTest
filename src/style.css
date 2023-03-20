@@ -37,16 +37,21 @@ body {
   width: 17em;
   background-color: #bbb;
   border-radius: 50%;
-  border-top: 5px solid blanchedalmond;
   display: inline-block;
   position: absolute;
 }
 .CircleLayer > h3 {
   transform: skew(-12deg) rotate(-12deg);
-  padding-top: 30%;
-  padding-left: 25%;
+  padding-top: 25%;
+  padding-left: 20%;
   font-family: "Sarpanch", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.75em;
+}
+.CircleLayer > h3 > span{
+  font-size: 2em;
+  position: absolute;
+  bottom: 40%;
+  left: 3%;
 }
 .OuterLayer{
   position: absolute;
@@ -54,7 +59,7 @@ body {
   width: 17em;
   border: 16px solid #f3f3f3;
   border-radius: 60%;
-  border-top: 16px solid #3498db;
+  border-top: 16px solid #283035;
   scale: 1.5;
   animation: spin1 2s linear infinite,size 2s;
   animation-direction:alternate;
@@ -69,6 +74,6 @@ body {
 }
 @keyframes spin1 {
   /* transform:scale(var(--scale)) */
-  0% {transform:   rotate(calc(var(--degree)*140) ); }
+  0% {transform:   rotate(calc(var(--degree)*15) ); }
   100% {transform:  rotate(0deg); }
 }
