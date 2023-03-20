@@ -15,16 +15,7 @@ export default function Page1() {
 }
 function CircleLayer({ size, layer }) {
   return (
-    <div
-      style={{
-        zIndex: layer,
-        border: "16px solid",
-        borderRadius: "50%",
-        borderTop: " 16px solid #3498db",
-        height: "30vh",
-        width: "15vh",
-        gridArea: "three",
-      }}
+    <div className="CircleLayer"
     ></div>
   );
 }
