@@ -1,32 +1,70 @@
-html{
+@import url("https://fonts.googleapis.com/css2?family=Sarpanch:wght@400;600&display=swap");
+/* Root for css variable */
+:root{
+  --scale:1;
+  --degree: 1deg;
+}
+html {
   height: 100%;
   overflow: hidden;
 }
-body{
+body {
   margin: 0;
   padding: 0;
 }
-.App{
+.App {
   display: flex;
   height: 100svh;
 }
-#Page1{
+#Page1 {
   width: 100vw;
   height: 100vh;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 2fr;
-  grid-template-areas: 'one two''three thour';
+  grid-template-areas: "one two" "three thour";
 }
-.CircleLayer{
-  background: repeating-radial-gradient(circle at 1%, #333, #333 20%, #eee 75%);
-  background-size:100% 100%;
-  shape-outside: circle();
-clip-path: circle(15vw at center center);
-  animation: SpinCircle 2000ms ease-in-out infinite;
+#Circlewrapper {
   grid-area: three;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CircleLayer {
+  height: 17em;
+  width: 17em;
+  background-color: #bbb;
+  border-radius: 50%;
+  border-top: 5px solid blanchedalmond;
+  display: inline-block;
+  position: absolute;
+}
+.CircleLayer > h1 {
+  transform: skew(-12deg) rotate(-12deg);
+  padding-top: 30%;
+  padding-left: 25%;
+  font-family: "Sarpanch", sans-serif;
+  font-size: 1.5em;
+}
+.OuterLayer{
+  position: relative;
+  height: 17em;
+  width: 17em;
+  border: 16px solid #f3f3f3;
+  border-radius: 60%;
+  border-top: 16px solid #3498db;
+  animation: spin1 2s linear infinite,size 2s;
+  animation-direction:alternate;
 }
 @keyframes SpinCircle {
-  0%{transform: rotate(0deg);}
-  100%{transform: rotate(360deg);} 
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin1 {
+  0% { transform:scale(var(--scale)) rotate(calc(var(--degree)*140) ); }
+  100% { transform:scale(calc(var(--scale)*1.05)) rotate(0deg); }
 }
