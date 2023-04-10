@@ -14,12 +14,12 @@ body {
   min-width: fit-content;
 }
 .App {
-  display: flex;
-  height: 100svh;
+  display: grid;
+  grid-template-columns: clamp(90vw,95vw,100vw);
+  grid-template-rows: repeat(3,100vh);
+  overflow-x: hidden;
 }
 #Page1 {
-  width: 100vw;
-  height: 100vh;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 2fr;

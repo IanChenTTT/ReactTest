@@ -22,7 +22,6 @@ export default function Page1() {
           <CircleLayer  size={0.92} layer={-2}></CircleLayer>
           <CircleLayer size={0.96} layer={-3}></CircleLayer>
           <CircleLayer size={1.1} layer={-4}></CircleLayer>
-
           <CircleLayer size={1.2} layer={-5}></CircleLayer>
           <CircleLayer size={1.3} layer={-6}></CircleLayer>
           <CircleLayer size={1.4} layer={-7}></CircleLayer>
