@@ -37,8 +37,11 @@ function Page2Rfront(props) {
           <span className="CircleLayer" id="P2_Circle3">
             <p className="AwsomeFont">
               <br />
-              {!isActive ? <P2_1CirIsFront></P2_1CirIsFront> :
-               <P2_2CirIsBack></P2_2CirIsBack>};
+              {!isActive ? (
+                <P2_1CirIsFront></P2_1CirIsFront>
+              ) : (
+                <P2_2CirIsBack></P2_2CirIsBack>
+              )}
             </p>
           </span>
         </div>
@@ -49,21 +52,23 @@ function Page2Rfront(props) {
           }}
           onClick={handleClick}
         >
-          <div className="CircleLayer AwsomeFont">
-               {isActive? <P2_2CirIsFront></P2_2CirIsFront>
-           : <P2_2CirIsBack></P2_2CirIsBack>};
-          </div>
+          <span className="CircleLayer AwsomeFont" id="Skill">
+            {isActive ? (
+              <P2_2CirIsFront></P2_2CirIsFront>
+            ) : (
+              <P2_2CirIsBack></P2_2CirIsBack>
+            )}
+          </span>
         </div>
       </div>
     </>
   );
 }
 
-
 function P2_1CirIsFront() {
   return (
     <>
-    <span style={{ fontWeight: 600 }}>專長</span>
+      <span style={{ fontWeight: 600 }}>專長</span>
       <br />
       前端:
       <br />
@@ -77,7 +82,7 @@ function P2_1CirIsFront() {
       <br />
       資料庫
       <br />
-      Mysql; 
+      Mysql;
     </>
   );
 }
@@ -95,15 +100,41 @@ function P2_2CirIsBack() {
     </>
   );
 }
-function P2_2CirIsFront(){
-return(
-  <>
-  <div  id="P2_4Cir">
-    <div style={{gridArea: 1}}>
-
-    </div>
-
-  </div>
-  </>
-)
+function P2_2CirIsFront() {
+  return (
+    <>
+      <div id="P2_4Cir">
+        <div>
+          <img src="../image/VecHtml.svg" alt="" />
+        </div>
+        <div style={{transform: "translate(0)"}}>
+          <p>
+            Form validation
+            LAYOUT: Grid/Flex - RWD
+          </p>
+        </div>
+        <div>
+          <img src="../image/VecJS.svg" alt="" />
+        </div>
+        <div>
+          <p>
+          DOM Api
+          <br />
+          Fetch Api
+          <br />
+          ES6 
+          </p>
+        </div>
+        <div>
+          <img src="../image/Vecnode.svg" alt="" />
+        </div>
+        <div>
+          <p>
+        Asyc / Sync / event loop
+            express server/Route/request Methods
+          </p>
+        </div>
+      </div>
+    </>
+  );
 }
