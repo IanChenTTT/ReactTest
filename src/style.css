@@ -5,10 +5,10 @@
   --degree: 1deg;
 }
 html {
-  height: 100%;
-  overflow: hidden;
+height: 100%;
 }
 body {
+  height: 400svh;
   margin: 0;
   padding: 0;
   min-width: fit-content;
@@ -30,6 +30,10 @@ body {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 2fr;
   grid-template-areas: "one two" "three thour";
+}
+
+#Page1 {
+  overflow: clip;
 }
 #Circlewrapper {
   grid-area: three;

@@ -7,7 +7,7 @@ let Element = Array(10).map(()=>{return InitialSize+0.1});
 export default function Page1() {
 
   return (
-    <div id="Page1">
+    <div id="Page1" className="EachPage">
       <div id="Circlewrapper">
         <span className="CircleLayer">
           <h3>
