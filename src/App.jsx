@@ -1,8 +1,8 @@
 import { Component, useState } from 'react'
 import './style.css';
-import Page1 from './Page1.jsx';
-import Page2 from './Page2.jsx';
-import Page3 from './Page3.jsx';
+import Page1 from './page1.jsx';
+import Page2 from './page2.jsx';
+import Page3 from './page3.jsx';
 function App() {
   return (
     <div className="App">
