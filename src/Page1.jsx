@@ -7,7 +7,7 @@ let Element = Array(10).map(()=>{return InitialSize+0.1});
 export default function Page1() {
 
   return (
-    <div id="Page1" className="EachPage">
+    <div id="Page1" className="Eachpage">
       <div id="Circlewrapper">
         <span className="CircleLayer">
           <h3>
@@ -48,7 +48,7 @@ function CircleLayer({ size, layer }) {
     <span ref={myRef} className="OuterLayer" style={{
       scale: `${size}`,
       zIndex: `${layer}`,
-      animationDuration: `${getRandomInt(4000,10000)}ms`,
+      animationDuration: `${getRandomInt(9000,10000)}ms`,
       "--degree": `${getRandomInt(0,90)}deg`,
     }} ></span>
   );

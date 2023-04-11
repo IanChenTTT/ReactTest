@@ -1,89 +1,173 @@
 @import url("https://fonts.googleapis.com/css2?family=Sarpanch:wght@400;600&display=swap");
+
 /* Root for css variable */
-:root{
-  --scale:1;
+:root {
+  --scale: 1;
   --degree: 1deg;
 }
+
 html {
-height: 100%;
+  height: 100%;
 }
+
 body {
+  width: 100vw;
   height: 400svh;
   margin: 0;
   padding: 0;
   min-width: fit-content;
-}
-.App {
-  display: grid;
-  grid-template-columns: clamp(90vw,95vw,100vw);
-  grid-template-rows: repeat(3,100vh);
   overflow-x: hidden;
 }
-#Page1 {
+
+.App {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 2fr;
-  grid-template-areas: "one two" "three thour";
-}
-#Page2{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 2fr;
-  grid-template-areas: "one two" "three thour";
+  grid-template-columns: 100vw;
+  grid-template-rows: repeat(3, 100vh);
+  overflow-x: hidden;
+  margin-inline: auto;
+  padding-inline: 1rem;
 }
 
-#Page1 {
-  overflow: clip;
+.Eachpage {
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "one two" "three thour";
+  overflow-y: clip;
+  overflow-x: hidden;
 }
+
 #Circlewrapper {
   grid-area: three;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  position: relative;
 }
+
 .CircleLayer {
-  height: 17em;
-  width: 17em;
+  width: clamp(15em, 35vw, 40vw);
+  height: clamp(15em, 35vw, 40vw);
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   position: absolute;
 }
-.CircleLayer > h3 {
+
+.AwsomeFont {
+  font-family: "Sarpanch", sans-serif;
+  font-size: clamp(1rem, 0.5rem + 1.3vw, 3rem);
+}
+
+.CircleLayer>h3 {
   transform: skew(-12deg) rotate(-12deg);
   padding-top: 25%;
   padding-left: 20%;
   font-family: "Sarpanch", sans-serif;
-  font-size: 1.75em;
+  font-size: clamp(1rem, 0.7054rem + 1.8857vw, 3rem);
 }
-.CircleLayer > h3 > span{
-  font-size: 2em;
+
+#Page1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  z-index: 1;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+#Page1 #Circlewrapper {
+  transform: translate(10vw, -80vh);
+}
+
+#Page1 .CircleLayer>h3>span {
+  font-size: clamp(1.3em, 1.65em, 2em);
   position: absolute;
   bottom: 40%;
   left: 3%;
 }
-.OuterLayer{
+
+.OuterLayer {
   position: absolute;
-  height: 17em;
-  width: 17em;
+  width: clamp(15em, 35vw, 40vw);
+  height: clamp(15em, 35vw, 40vw);
   border: 16px solid #f3f3f3;
   border-radius: 60%;
   border-top: 16px solid #283035;
   scale: 1.5;
-  animation: spin1 2s linear infinite,size 2s;
-  animation-direction:alternate;
+  animation: spin1 2s linear infinite, size 2s;
+  animation-direction: alternate;
 }
+
+/* PAGE 2  nth circle child*/
+#Page2 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  z-index: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+#Page2 :nth-child(1) {
+
+  grid-area: one;
+  justify-content: flex-start;
+}
+
+#P2_Circle2 {
+  display: flex;
+  flex-direction: column;
+}
+
+#Page2 :nth-child(1)>.CircleLayer {
+  height: clamp(10rem, 10.5rem + 2vw, 18em);
+  width: clamp(10rem, 10.5rem + 2vw, 18em);
+  transform: translateY(10vh);
+}
+
+#Page2 :nth-child(2) {
+  grid-area: one;
+  /* justify-content: flex-end; */
+  
+  transform: translate(clamp(10vw, 10.5rem + 2vw, 18em),20vh);
+}
+#Page2 :nth-child(3){
+  grid-area: three;
+  justify-content: flex-end;
+}
+#Page2 :nth-child(2)>.CircleLayer {
+  width: clamp(10em, 25vw, 30vw);
+  height: clamp(10em, 25vw, 30vw);
+}
+
+/* PAGE 3 */
+#Page3 #Circlewrapper {
+  grid-area: two;
+  justify-content: flex-end;
+}
+
+.clone {
+  bottom: 5rem;
+  position: relative;
+}
+
 @keyframes SpinCircle {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 @keyframes spin1 {
+
   /* transform:scale(var(--scale)) */
-  0% {transform:   rotate(calc(var(--degree)*15) ); }
-  100% {transform:  rotate(0deg); }
+  0% {
+    transform: rotate(calc(var(--degree)*15));
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
