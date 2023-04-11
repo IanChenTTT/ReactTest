@@ -22,7 +22,6 @@ export default function Page2() {
           </span>
 
           <button id="Myskill"></button>
-
         </div>
         <div id="Circlewrapper">
           <span className="CircleLayer" id="P2_Circle3">
