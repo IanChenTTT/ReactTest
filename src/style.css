@@ -12,7 +12,7 @@ html {
 
 body {
   width: 100vw;
-  height: 400svh;
+  height: 500svh;
   margin: 0;
   padding: 0;
   min-width: fit-content;
@@ -22,7 +22,7 @@ body {
 .App {
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: repeat(3, 100vh);
+  grid-template-rows: repeat(5, 100vh);
   overflow-x: hidden;
   margin-inline: auto;
   padding-inline: 1rem;
@@ -106,40 +106,69 @@ body {
   grid-column-start: 1;
   grid-column-end: 2;
 }
-
 #Page2 :nth-child(1) {
-
   grid-area: one;
   justify-content: flex-start;
 }
-
-#P2_Circle2 {
-  display: flex;
-  flex-direction: column;
-}
-
 #Page2 :nth-child(1)>.CircleLayer {
   height: clamp(10rem, 10.5rem + 2vw, 18em);
   width: clamp(10rem, 10.5rem + 2vw, 18em);
   transform: translateY(10vh);
 }
-
+#P2_Circle2 {
+  display: flex;
+  flex-direction: column;
+}
 #Page2 :nth-child(2) {
   grid-area: one;
-  /* justify-content: flex-end; */
-  
   transform: translate(clamp(10vw, 10.5rem + 2vw, 18em),20vh);
+}
+
+#Page2 :nth-child(2)>.CircleLayer {
+  width: clamp(10em, 25vw, 30vw);
+  height: clamp(10em, 25vw, 30vw);
 }
 #Page2 :nth-child(3){
   grid-area: three;
   justify-content: flex-end;
 }
-#Page2 :nth-child(2)>.CircleLayer {
-  width: clamp(10em, 25vw, 30vw);
-  height: clamp(10em, 25vw, 30vw);
+#Page2 :nth-child(3)>.CircleLayer {
+  transform: translate(1vw,1vh);
 }
-
+#Page2 :nth-child(3)>.CircleLayer>p {
+  transform: scale(0.9);
+  padding-top: 10%;
+  padding-left: 2%;
+}
+#Page2 :nth-child(4){
+  grid-area: three;
+  justify-content: flex-end; 
+  position: relative;
+  z-index: -10;
+}
+#Page2 :nth-child(4)>.CircleLayer{
+  transform: translate(15vw,1vh);
+  background-color: #3c3a3f; 
+   display: flex;
+  flex-direction: row-reverse;
+  color: #f3eaea;
+  align-items: center;
+  padding: 1em;
+}
+#P2_4Cir{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  grid-template-areas: '1 2 3 4 5 6 7 8';
+}
 /* PAGE 3 */
+#Page3{
+  grid-row-start: 3;
+  grid-row-end: 4;
+  z-index: 5;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
 #Page3 #Circlewrapper {
   grid-area: two;
   justify-content: flex-end;
