@@ -211,21 +211,30 @@ body {
 /* PAGE 3 */
 #Page3 {
   grid-row-start: 3;
-  grid-row-end: 4;
+  grid-row-end: 5;
   z-index: 5;
   grid-column-start: 1;
   grid-column-end: 2;
-    background-image: radial-gradient(closest-side, transparent 98%, #4c443f 99%), radial-gradient(closest-side, #5d4743 98%, #89a6aa 99%);
-  background-size: 150px 150px;
-  background-position: 0 0, 75px 75px;
 }
 
-#Page3 #Circlewrapper {
+#Page3 :nth-child(1) {
   grid-area: two;
   justify-content: flex-end; 
-
+  flex-direction: column;
 }
-
+#Page3 .CircleLayer{
+  width: clamp(10em, 25vw, 30vw);
+  height: clamp(10em, 25vw, 30vw);
+      /* font-size: clamp(1.5rem, 1.5054rem + 1.8857vw, 3.5rem); */
+}
+#Page3 :nth-child(1) + #Circlewrapper {
+  grid-area: three;
+  justify-content: flex-end;
+}
+#Page3 :nth-child(1) + #Circlewrapper img{
+  width: 20vh;
+  height: 20vh;
+}
 .clone {
   bottom: 5rem;
   position: relative;
