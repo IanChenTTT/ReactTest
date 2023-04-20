@@ -4,7 +4,7 @@ import getRandomInt from "./MathFunction";
 let InitialSize = 0.8
 let Element = Array(10).map(()=>{return InitialSize+0.1});
 
-export default function Page1() {
+export default function page1() {
 
   return (
     <div id="Page1" className="Eachpage">
@@ -37,7 +37,7 @@ export default function Page1() {
     
   );
 }
-function CircleLayer({ size, layer }) { 
+export function CircleLayer({ size, layer }) { 
   const myRef = useRef(null);
   useEffect(()=>{
     console.log('render')

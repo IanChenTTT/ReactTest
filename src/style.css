@@ -48,10 +48,11 @@ body {
 .CircleLayer {
   width: clamp(15em, 35vw, 40vw);
   height: clamp(15em, 35vw, 40vw);
-  background-color: #bbb;
+  background-color: #bde0dc;
   border-radius: 50%;
   display: inline-block;
   position: absolute;
+  z-index: 100;
 }
 
 .AwsomeFont {
@@ -98,11 +99,13 @@ body {
   animation: spin1 2s linear infinite, size 2s;
   animation-direction: alternate;
 }
-.OuterLayer::before{
-  position:relative ;
+
+.OuterLayer::before {
+  position: relative;
   background-color: black;
   z-index: 0;
 }
+
 /* PAGE 2  nth circle child*/
 #Page2 {
   grid-row-start: 2;
@@ -217,32 +220,91 @@ body {
 #Page3 {
   grid-row-start: 3;
   grid-row-end: 5;
-  z-index: 5;
   grid-column-start: 1;
   grid-column-end: 2;
 }
 
 #Page3 :nth-child(1) {
   grid-area: two;
-  justify-content: flex-end; 
+  justify-content: flex-start;
   flex-direction: column;
 }
-#Page3 .CircleLayer{
+
+#Page3 .CircleLayer {
   width: clamp(10em, 25vw, 30vw);
   height: clamp(10em, 25vw, 30vw);
-      /* font-size: clamp(1.5rem, 1.5054rem + 1.8857vw, 3.5rem); */
+  /* font-size: clamp(1.5rem, 1.5054rem + 1.8857vw, 3.5rem); */
 }
-#Page3 :nth-child(1) + #Circlewrapper {
-  grid-area: three;
+
+#Page3 :nth-child(1)+#Circlewrapper {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  align-items: baseline;
   justify-content: flex-end;
 }
-#Page3 :nth-child(1) + #Circlewrapper img{
-  width: 20vh;
-  height: 20vh;
+
+#Page3 :nth-child(1)+#Circlewrapper .CircleLayer{
+    width: clamp(15em, 30vw, 40vw);
+  height: clamp(15em, 30vw, 40vw);
+  transform: translateY(15vh);
+}
+#Page3 :nth-child(1)+#Circlewrapper img {
+  width: 50%;
+  height: 50%;
+}
+#Page3 :nth-child(1)+#Circlewrapper .CircleLayer ul{
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+#Page3 :nth-child(1)+#Circlewrapper .CircleLayer ul > li
+{
+  width: 80%;
+  height: 80%;
 }
 .clone {
   bottom: 5rem;
   position: relative;
+}
+/* Page 4 start */
+#Page4 {
+  grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    overflow-y: clip;
+}
+#Page4 #Circlewrapper {
+  grid-area: three;
+  justify-content: flex-end;
+  align-items: baseline;
+  transform: translate(10vw,20vh);
+  
+}
+#Page4 :nth-child(1) .CircleLayer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 5;
+}
+#Page4 .OuterLayer {
+  transform: translateX(20vw);
+}
+#Page4 form {
+  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr 1fr;
+}
+#Page4 form button {
+  grid-row-start: 3;
+  grid-row-start: 4;
+  grid-column-start: 1;
+  grid-column-start: 2;
 }
 
 @keyframes SpinCircle {

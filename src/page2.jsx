@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Page2() {
+export default function page2() {
   return (
     <>
       <Page2Rfront></Page2Rfront>
@@ -33,7 +33,11 @@ function Page2Rfront(props) {
             </h3>
           </span>
         </div>
-        <div id="Circlewrapper">
+        <div id="Circlewrapper"
+        style={{
+          zIndex: isActive? `-10` : `10`,
+        }}
+        >
           <span className="CircleLayer" id="P2_Circle3">
             <p className="AwsomeFont">
               <br />
