@@ -90,14 +90,19 @@ body {
   position: absolute;
   width: clamp(15em, 35vw, 40vw);
   height: clamp(15em, 35vw, 40vw);
+  border-radius: 100%;
+  background: linear-gradient(45deg, #F48ACE 0%, #493A97 100%);
   border: 16px solid #f3f3f3;
-  border-radius: 60%;
   border-top: 16px solid #283035;
   scale: 1.5;
   animation: spin1 2s linear infinite, size 2s;
   animation-direction: alternate;
 }
-
+.OuterLayer::before{
+  position:relative ;
+  background-color: black;
+  z-index: 0;
+}
 /* PAGE 2  nth circle child*/
 #Page2 {
   grid-row-start: 2;

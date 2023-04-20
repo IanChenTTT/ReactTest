@@ -18,7 +18,7 @@ export default function Page1() {
             I like building web
           </h3>
         </span>
-          <CircleLayer size={0.9} layer={-1}></CircleLayer>
+          <CircleLayer size={0.9} layer={1}></CircleLayer>
           <CircleLayer  size={0.92} layer={-2}></CircleLayer>
           <CircleLayer size={0.96} layer={-3}></CircleLayer>
           <CircleLayer size={1.1} layer={-4}></CircleLayer>
