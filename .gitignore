@@ -26,3 +26,7 @@ dist-ssr
 #Firebase ignore
 firestore.rules
 firestore.indexes.json
+src/firebase/
+firebase.json
+.firebaserc
+storage.rules

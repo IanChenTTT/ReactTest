@@ -25,11 +25,9 @@ function Page2Rfront(props) {
         <div id="Circlewrapper">
           <span className="CircleLayer " id="P2_Circle2">
             <h3>
-              <span>
                 元智資傳系
                 <br />
                 陳衍易
-              </span>
             </h3>
           </span>
         </div>
@@ -72,21 +70,18 @@ function Page2Rfront(props) {
 function P2_1CirIsFront() {
   return (
     <>
-      <span style={{ fontWeight: 600 }}>專長</span>
-      <br />
+      <span style={{ fontWeight: 600 ,padding: "1em"}}>專長</span>
+      <p  className="AwsomeFont">
       前端:
+      切版 網頁動態效果
+      <span style={{padding: "1em"}}></span>
       <br />
-      從html/css 到 JS
-      <br />
-      JS/ES7 到 react JS
-      <br />
-      伺服器:
-      <br />
-      NodeJS+Express/php+Apache
+      後端: os/Node
       <br />
       資料庫
       <br />
-      Mysql;
+      關聯式:Mysql
+      </p>
     </>
   );
 }
@@ -109,33 +104,29 @@ function P2_2CirIsFront() {
     <>
       <div id="P2_4Cir">
         <div>
-          <img src="../image/VecHtml.svg" alt="" />
+          <img src="/image/VecHtml.svg" alt="" />
         </div>
         <div style={{transform: "translate(0)"}}>
           <p>
-            Form validation
-            LAYOUT: Grid/Flex - RWD
+            LAYOUT: Grid/Flex  RWD
           </p>
         </div>
         <div>
-          <img src="../image/VecJS.svg" alt="" />
+          <img src="/image/VecJs.svg" alt="" />
         </div>
         <div>
           <p>
           DOM Api
-          <br />
-          Fetch Api
-          <br />
-          ES6 
           </p>
         </div>
-        <div>
-          <img src="../image/Vecnode.svg" alt="" />
+        <div style={{gridArea: "nine"}}>
+          <img src="/image/Vecnode.svg" alt="" />
         </div>
         <div>
           <p>
-        Asyc / Sync / event loop
-            express server/Route/request Methods
+            event loop
+            <br />
+            express server/Route
           </p>
         </div>
       </div>
